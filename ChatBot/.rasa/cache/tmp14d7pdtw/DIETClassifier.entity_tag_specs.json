@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-cancel_code",
+      "2": "I-cancel_code",
+      "3": "L-cancel_code",
+      "4": "U-cancel_code",
+      "5": "B-date",
+      "6": "I-date",
+      "7": "L-date",
+      "8": "U-date",
+      "9": "B-name",
+      "10": "I-name",
+      "11": "L-name",
+      "12": "U-name",
+      "13": "B-number_of_people",
+      "14": "I-number_of_people",
+      "15": "L-number_of_people",
+      "16": "U-number_of_people",
+      "17": "B-phone_number",
+      "18": "I-phone_number",
+      "19": "L-phone_number",
+      "20": "U-phone_number",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-cancel_code": 1,
+      "I-cancel_code": 2,
+      "L-cancel_code": 3,
+      "U-cancel_code": 4,
+      "B-date": 5,
+      "I-date": 6,
+      "L-date": 7,
+      "U-date": 8,
+      "B-name": 9,
+      "I-name": 10,
+      "L-name": 11,
+      "U-name": 12,
+      "B-number_of_people": 13,
+      "I-number_of_people": 14,
+      "L-number_of_people": 15,
+      "U-number_of_people": 16,
+      "B-phone_number": 17,
+      "I-phone_number": 18,
+      "L-phone_number": 19,
+      "U-phone_number": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

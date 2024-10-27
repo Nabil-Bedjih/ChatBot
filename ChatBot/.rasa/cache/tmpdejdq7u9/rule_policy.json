@@ -1,0 +1,51 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"provide_phone_number\"}}]": "utter_ask_confirmation_reservation",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"provide_phone_number\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_confirmation_reservation\"}, \"user\": {\"intent\": \"provide_phone_number\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"cancel_code\": [1.0]}, \"user\": {\"intent\": \"deny_confirmation\"}}]": "utter_deny_cancellation",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"cancel_code\": [1.0]}, \"user\": {\"intent\": \"deny_confirmation\"}}, {\"prev_action\": {\"action_name\": \"utter_deny_cancellation\"}, \"slots\": {\"cancel_code\": [1.0]}, \"user\": {\"intent\": \"deny_confirmation\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"request_reservation\"}}]": "utter_ask_reservation_date",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"request_reservation\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_reservation_date\"}, \"user\": {\"intent\": \"request_reservation\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"provide_people_number\"}}]": "utter_ask_name",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"provide_people_number\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_name\"}, \"user\": {\"intent\": \"provide_people_number\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"phone_number\": [1.0]}, \"user\": {\"intent\": \"confirm_reservation\"}}]": "utter_confirm_reservation",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"phone_number\": [1.0]}, \"user\": {\"intent\": \"confirm_reservation\"}}, {\"prev_action\": {\"action_name\": \"utter_confirm_reservation\"}, \"slots\": {\"phone_number\": [1.0]}, \"user\": {\"intent\": \"confirm_reservation\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"cancel_code\": [1.0]}, \"user\": {\"intent\": \"confirm_cancellation\"}}]": "utter_cancel_reservation",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"cancel_code\": [1.0]}, \"user\": {\"intent\": \"confirm_cancellation\"}}, {\"prev_action\": {\"action_name\": \"utter_cancel_reservation\"}, \"slots\": {\"cancel_code\": [1.0]}, \"user\": {\"intent\": \"confirm_cancellation\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"request_info\"}}]": "utter_allergens_info",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"request_info\"}}, {\"prev_action\": {\"action_name\": \"utter_allergens_info\"}, \"user\": {\"intent\": \"request_info\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"provide_date\"}}]": "utter_ask_number_of_people",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"provide_date\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_number_of_people\"}, \"user\": {\"intent\": \"provide_date\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"phone_number\": [1.0]}, \"user\": {\"intent\": \"deny_confirmation\"}}]": "utter_deny_reservation",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"phone_number\": [1.0]}, \"user\": {\"intent\": \"deny_confirmation\"}}, {\"prev_action\": {\"action_name\": \"utter_deny_reservation\"}, \"slots\": {\"phone_number\": [1.0]}, \"user\": {\"intent\": \"deny_confirmation\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cancel_reservation\"}}]": "utter_request_cancel_code",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cancel_reservation\"}}, {\"prev_action\": {\"action_name\": \"utter_request_cancel_code\"}, \"user\": {\"intent\": \"cancel_reservation\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"provide_name\"}}]": "utter_ask_phone_number",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"provide_name\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_phone_number\"}, \"user\": {\"intent\": \"provide_name\"}}]": "action_listen"
+    },
+    "rule_only_slots": [
+      "cancel_code",
+      "phone_number"
+    ],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"request_info\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"phone_number\": [1.0]}, \"user\": {\"intent\": \"deny_confirmation\"}}, {\"prev_action\": {\"action_name\": \"utter_deny_reservation\"}, \"slots\": {\"phone_number\": [1.0]}, \"user\": {\"intent\": \"deny_confirmation\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"cancel_code\": [1.0]}, \"user\": {\"intent\": \"deny_confirmation\"}}, {\"prev_action\": {\"action_name\": \"utter_deny_cancellation\"}, \"slots\": {\"cancel_code\": [1.0]}, \"user\": {\"intent\": \"deny_confirmation\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"phone_number\": [1.0]}, \"user\": {\"intent\": \"deny_confirmation\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"cancel_code\": [1.0]}, \"user\": {\"intent\": \"confirm_cancellation\"}}]",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"cancel_code\": [1.0]}, \"user\": {\"intent\": \"confirm_cancellation\"}}, {\"prev_action\": {\"action_name\": \"utter_cancel_reservation\"}, \"slots\": {\"cancel_code\": [1.0]}, \"user\": {\"intent\": \"confirm_cancellation\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"phone_number\": [1.0]}, \"user\": {\"intent\": \"confirm_reservation\"}}, {\"prev_action\": {\"action_name\": \"utter_confirm_reservation\"}, \"slots\": {\"phone_number\": [1.0]}, \"user\": {\"intent\": \"confirm_reservation\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"cancel_code\": [1.0]}, \"user\": {\"intent\": \"deny_confirmation\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"request_info\"}}, {\"prev_action\": {\"action_name\": \"utter_allergens_info\"}, \"user\": {\"intent\": \"request_info\"}}]",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"phone_number\": [1.0]}, \"user\": {\"intent\": \"confirm_reservation\"}}]"
+    ]
+  }
+}

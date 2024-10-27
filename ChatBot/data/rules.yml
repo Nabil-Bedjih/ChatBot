@@ -1,0 +1,74 @@
+version: "3.1"
+
+rules:
+  - rule: Dire bonjour
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Demander la date de réservation
+    steps:
+      - intent: request_reservation
+      - action: utter_ask_reservation_date
+
+  - rule: Demander le nombre de personnes
+    steps:
+      - intent: provide_date
+      - action: utter_ask_number_of_people
+
+  - rule: Demander le nom pour la réservation
+    steps:
+      - intent: provide_people_number
+      - action: utter_ask_name
+
+  - rule: Demander le numéro de téléphone
+    steps:
+      - intent: provide_name
+      - action: utter_ask_phone_number
+
+  - rule: Demander confirmation pour la réservation
+    steps:
+      - intent: provide_phone_number
+      - action: utter_ask_confirmation_reservation
+
+  - rule: Confirmation de réservation
+    condition:
+      - slot_was_set:
+          - phone_number: true
+    steps:
+      - intent: confirm_reservation
+      - action: utter_confirm_reservation
+
+  - rule: Annulation de confirmation de réservation
+    condition:
+      - slot_was_set:
+          - phone_number: true
+    steps:
+      - intent: deny_confirmation
+      - action: utter_deny_reservation
+
+  - rule: Demander code d'annulation
+    steps:
+      - intent: cancel_reservation
+      - action: utter_request_cancel_code
+
+  - rule: Confirmer annulation de réservation
+    condition:
+      - slot_was_set:
+          - cancel_code: true
+    steps:
+      - intent: confirm_cancellation
+      - action: utter_cancel_reservation
+
+  - rule: Annulation de l'annulation de réservation
+    condition:
+      - slot_was_set:
+          - cancel_code: true
+    steps:
+      - intent: deny_confirmation
+      - action: utter_deny_cancellation
+
+  - rule: Fournir des informations sur les allergènes
+    steps:
+      - intent: request_info
+      - action: utter_allergens_info

@@ -1,0 +1,77 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - bonjour
+    - salut
+    - bonsoir
+    - hello
+    - coucou
+
+- intent: request_reservation
+  examples: |
+    - je voudrais faire une réservation
+    - je souhaite réserver une table
+    - je veux réserver
+
+- intent: provide_date
+  examples: |
+    - le [25 décembre](date)
+    - le [20 janvier](date)
+    - demain
+    - vendredi prochain
+
+- intent: provide_people_number
+  examples: |
+    - pour [3 personnes](number_of_people)
+    - nous serons [4](number_of_people)
+    - il y aura [2 personnes](number_of_people)
+
+- intent: provide_name
+  examples: |
+    - au nom de [Dupont](name)
+    - c'est pour [Marie](name)
+    - sous le nom [Leclerc](name)
+
+- intent: provide_phone_number
+  examples: |
+    - mon numéro est [0612345678](phone_number)
+    - vous pouvez m'appeler au [0102030405](phone_number)
+    - [0787654321](phone_number)
+
+- intent: confirm_reservation
+  examples: |
+    - oui, je confirme la réservation
+    - confirmez ma réservation
+    - je valide la réservation
+
+- intent: confirm_cancellation
+  examples: |
+    - oui, annulez la réservation
+    - je confirme l'annulation
+    - annulez
+
+- intent: deny_confirmation
+  examples: |
+    - non, pas besoin
+    - non, je ne veux pas
+    - ne confirmez pas
+
+- intent: cancel_reservation
+  examples: |
+    - annuler ma réservation
+    - je veux annuler
+    - pouvez-vous annuler ma réservation
+
+- intent: provide_cancel_code
+  examples: |
+    - le code est [ABC123](cancel_code)
+    - mon code d'annulation est [DEF456](cancel_code)
+    - [GHI789](cancel_code)
+
+- intent: request_info
+  examples: |
+    - informations sur les allergènes
+    - avez-vous des informations sur les allergènes?
+    - allergènes

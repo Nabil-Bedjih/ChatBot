@@ -1,0 +1,52 @@
+version: "3.1"
+
+stories:
+  - story: Scénario de réservation avec confirmation
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_reservation
+      - action: utter_ask_reservation_date
+      - intent: provide_date
+      - action: utter_ask_number_of_people
+      - intent: provide_people_number
+      - action: utter_ask_name
+      - intent: provide_name
+      - action: utter_ask_phone_number
+      - intent: provide_phone_number
+      - action: utter_ask_confirmation_reservation
+      - intent: confirm_reservation
+      - action: utter_confirm_reservation
+
+  - story: Scénario d'annulation de réservation avec code
+    steps:
+      - intent: cancel_reservation
+      - action: utter_request_cancel_code
+      - intent: provide_cancel_code
+      - action: utter_ask_confirmation_cancellation
+      - intent: confirm_cancellation
+      - action: utter_cancel_reservation
+
+  - story: Scénario de refus de confirmation pour la réservation
+    steps:
+      - intent: request_reservation
+      - action: utter_ask_reservation_date
+      - intent: provide_date
+      - action: utter_ask_number_of_people
+      - intent: provide_people_number
+      - action: utter_ask_name
+      - intent: provide_name
+      - action: utter_ask_phone_number
+      - intent: provide_phone_number
+      - action: utter_ask_confirmation_reservation
+      - intent: deny_confirmation
+      - action: utter_deny_reservation
+
+  - story: Scénario de refus de confirmation pour l'annulation
+    steps:
+      - intent: cancel_reservation
+      - action: utter_request_cancel_code
+      - intent: provide_cancel_code
+      - action: utter_ask_confirmation_cancellation
+      - intent: deny_confirmation
+      - action: utter_deny_cancellation

@@ -1,0 +1,93 @@
+version: "3.1"
+
+intents:
+  - greet
+  - request_reservation
+  - provide_date
+  - provide_people_number
+  - provide_name
+  - provide_phone_number
+  - confirm_reservation
+  - confirm_cancellation
+  - deny_confirmation
+  - cancel_reservation
+  - provide_cancel_code
+  - request_info
+
+entities:
+  - date
+  - number_of_people
+  - name
+  - phone_number
+  - cancel_code
+
+slots:
+  date:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: date
+  number_of_people:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: number_of_people
+  name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: name
+  phone_number:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: phone_number
+  cancel_code:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: cancel_code
+
+responses:
+  utter_greet:
+    - text: "Bonjour, bienvenue ! Comment puis-je vous aider aujourd'hui ?"
+
+  utter_ask_reservation_date:
+    - text: "Pour quelle date souhaitez-vous faire une réservation ?"
+
+  utter_ask_number_of_people:
+    - text: "Combien de personnes seront présentes pour cette réservation ?"
+
+  utter_ask_name:
+    - text: "Merci. Sous quel nom souhaitez-vous enregistrer la réservation ?"
+
+  utter_ask_phone_number:
+    - text: "Afin de finaliser votre réservation, pourriez-vous me communiquer votre numéro de téléphone ?"
+
+  utter_ask_confirmation_reservation:
+    - text: "Voulez-vous confirmer cette réservation ? Répondez par 'oui' pour confirmer ou 'non' pour annuler."
+
+  utter_confirm_reservation:
+    - text: "Votre réservation est confirmée. Merci de nous avoir choisis ! Nous espérons que vous passerez un agréable moment."
+
+  utter_deny_reservation:
+    - text: "D'accord, la réservation n'a pas été confirmée. N'hésitez pas à revenir si vous changez d'avis."
+
+  utter_ask_confirmation_cancellation:
+    - text: "Êtes-vous sûr de vouloir annuler votre réservation ? Répondez par 'oui' pour confirmer l'annulation ou 'non' pour conserver la réservation."
+
+  utter_cancel_reservation:
+    - text: "Votre réservation a bien été annulée. Nous restons à votre disposition pour toute nouvelle demande."
+
+  utter_deny_cancellation:
+    - text: "Votre réservation n'a pas été annulée. Nous restons à votre disposition si vous avez d'autres besoins."
+
+  utter_request_cancel_code:
+    - text: "Pour confirmer l'annulation, j'aurai besoin du code de votre réservation."
+
+  utter_allergens_info:
+    - text: "Pour plus d'informations sur les allergènes, veuillez consulter notre site web ou contacter notre service client."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
